@@ -26,8 +26,21 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.stagging {
+  @apply flex items-center justify-center flex-col gap-5 duration-300 w-full;
+}
+.stagging div {
+  @apply border border-red-500 hover:bg-red-500 max-w-md w-full flex items-center justify-center rounded-full p-2
+}
+.stagging div:nth-child(2) {
+  @apply border border-green-500 hover:bg-green-500 max-w-md w-full flex items-center justify-center
+}
+.stagging div:nth-child(3) {
+  @apply border border-yellow-500 hover:bg-yellow-500 max-w-md w-full flex items-center justify-center
+}
+.stagging div:nth-child(4) {
+  @apply border border-blue-500 max-w-md hover:bg-blue-500 w-full flex items-center justify-center
+}
+.stagging div:last-child {
+  @apply border border-pink-500 hover:bg-pink-500 max-w-md w-full flex items-center justify-center
 }
